@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopSphere SQL Playbook</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐘</text></svg>">
+  <link rel="stylesheet" href="/vendor/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="/vendor/codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="/vendor/codemirror/theme/material-darker.css">
+  <link rel="stylesheet" href="/vendor/codemirror/theme/eclipse.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <a class="brand" href="#/">
+        <span class="brand-logo">🐘</span>
+        <span><strong>ShopSphere</strong><small>SQL Playbook</small></span>
+      </a>
+      <nav class="nav-main">
+        <a href="#/" data-nav="home">🏠 Home</a>
+        <a href="#/scratch" data-nav="scratch">🧪 Scratchpad</a>
+        <a href="#/schema" data-nav="schema">🗺️ Schema explorer</a>
+        <a href="#/doc/GLOSSARY" data-nav="doc/GLOSSARY">📖 Glossary</a>
+        <a href="#/doc/KEYWORD_INDEX" data-nav="doc/KEYWORD_INDEX">🔎 Keyword index</a>
+        <a href="#/doc/TIPS" data-nav="doc/TIPS">💡 Tips</a>
+      </nav>
+      <div id="chapter-nav" class="nav-chapters"></div>
+      <div class="sidebar-foot">
+        <button id="reset-progress" class="link-btn" title="Clear your saved progress in this browser">Reset progress</button>
+      </div>
+    </aside>
+
+    <div id="main-wrap">
+      <header id="topbar">
+        <button id="menu-toggle" class="icon-btn" title="Toggle sidebar">☰</button>
+        <div class="search">
+          <input id="search" type="search" placeholder="Search queries, keywords, chapters…  ( / )" autocomplete="off">
+          <div id="search-results" class="search-results hidden"></div>
+        </div>
+        <div class="top-actions">
+          <span id="running" class="running hidden"><span class="spinner"></span><span id="running-label">Running…</span>
+            <button id="cancel-btn" class="btn btn-small btn-danger">Cancel</button></span>
+          <label class="switch" title="Safe mode: SQL you write or edit runs in a transaction that is ROLLED BACK, so the data set never changes. Unchanged playbook queries always run exactly as written.">
+            <input type="checkbox" id="safe-toggle" checked>
+            <span class="slider"></span>
+            <span class="switch-label">Safe mode</span>
+          </label>
+          <button id="session-btn" class="chip" title="Your database session (like a psql window). Click to reset it."><span class="dot"></span><span id="session-label">session</span></button>
+          <button id="theme-btn" class="icon-btn" title="Toggle dark mode">🌙</button>
+        </div>
+      </header>
+      <main id="main"></main>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/vendor/codemirror/lib/codemirror.js"></script>
+  <script src="/vendor/codemirror/mode/sql/sql.js"></script>
+  <script src="/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="/vendor/codemirror/addon/comment/comment.js"></script>
+  <script src="/vendor/codemirror/addon/display/placeholder.js"></script>
+  <script src="/vendor/codemirror/addon/hint/show-hint.js"></script>
+  <script src="/vendor/codemirror/addon/hint/sql-hint.js"></script>
+  <script src="/vendor/codemirror/addon/runmode/runmode.js"></script>
+  <script src="/vendor/marked/marked.umd.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
