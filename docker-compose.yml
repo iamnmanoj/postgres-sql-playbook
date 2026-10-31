@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:17
+    container_name: shopsphere-pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shopsphere
+      TZ: UTC
+    ports:
+      - "${PG_PORT:-5432}:5432"
+    command:
+      - postgres
+      - -c
+      - shared_preload_libraries=pg_stat_statements
+      - -c
+      - pg_stat_statements.track=all
+      - -c
+      - log_lock_waits=on
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./:/playbook:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d shopsphere"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:

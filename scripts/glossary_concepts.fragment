@@ -1,0 +1,38 @@
+## Core concepts
+
+| Concept | Meaning | Chapter |
+|---|---|---|
+| **ACID** | Atomicity, Consistency, Isolation, Durability: the guarantees of a transaction | [11](chapters/11_transactions_locking/README.md) |
+| **Aggregate** | A function that reduces many rows to one value (`sum`, `count`…) | [05](chapters/05_aggregation/README.md) |
+| **Anti-join** | "rows in A with no match in B" (`NOT EXISTS`, `LEFT JOIN … IS NULL`) | [06](chapters/06_joins/README.md), [07](chapters/07_subqueries_set_ops/README.md) |
+| **Cardinality** | Number of rows (or the uniqueness of a column's values) | [14](chapters/14_indexes_performance/README.md) |
+| **CTE** | Common Table Expression: a named sub-result introduced with `WITH` | [08](chapters/08_ctes_recursive/README.md) |
+| **DDL / DML / DCL / TCL** | Data Definition (`CREATE`, `ALTER`) / Manipulation (`INSERT`, `UPDATE`) / Control (`GRANT`) / Transaction Control (`COMMIT`) | [01](chapters/01_ddl_schema/README.md), [10](chapters/10_dml_upsert_merge/README.md), [19](chapters/19_security_rls/README.md), [11](chapters/11_transactions_locking/README.md) |
+| **Dead tuple** | An old row version left behind by `UPDATE`/`DELETE`, reclaimed by `VACUUM` | [14](chapters/14_indexes_performance/README.md) |
+| **Denormalisation** | Storing derived or duplicated data on purpose for speed (e.g. `order_items.seller_id`) | [01](chapters/01_ddl_schema/README.md) |
+| **Deadlock** | Two transactions each waiting for a lock the other holds | [11](chapters/11_transactions_locking/README.md) |
+| **Fan-out** | Row multiplication when joining one-to-many relations | [06](chapters/06_joins/README.md) |
+| **Foreign key** | A column whose values must exist in a referenced table | [01](chapters/01_ddl_schema/README.md) |
+| **Index** | An auxiliary structure that makes lookups and sorts fast | [14](chapters/14_indexes_performance/README.md) |
+| **Isolation level** | How much concurrent transactions can see of each other | [11](chapters/11_transactions_locking/README.md) |
+| **Lexeme** | A normalised word in full-text search (`charging` → `charg`) | [13](chapters/13_full_text_search/README.md) |
+| **MVCC** | Multi-Version Concurrency Control: readers see a snapshot, writers create new row versions | [11](chapters/11_transactions_locking/README.md) |
+| **Normalisation** | Splitting data into tables so each fact is stored once | [01](chapters/01_ddl_schema/README.md) |
+| **NULL** | "Unknown / missing": comparisons with it yield NULL (three-valued logic) | [03](chapters/03_select_filtering/README.md) |
+| **OID / regclass** | Internal object ids and their name-casting types | [20](chapters/20_advanced_extras/README.md) |
+| **Partition / pruning** | A child table holding a slice of a partitioned table / skipping irrelevant partitions | [18](chapters/18_partitioning/README.md) |
+| **Planner / plan** | The optimizer and the execution strategy it picks (see `EXPLAIN`) | [14](chapters/14_indexes_performance/README.md) |
+| **Policy (RLS)** | A row filter attached to a table for some roles and commands | [19](chapters/19_security_rls/README.md) |
+| **Primary key** | The unique, not-null identifier of a row | [01](chapters/01_ddl_schema/README.md) |
+| **Role** | A user or group that owns objects and holds privileges | [19](chapters/19_security_rls/README.md) |
+| **Sargable** | A predicate written so that an index can be used (no function wrapped around the column) | [14](chapters/14_indexes_performance/README.md) |
+| **Schema** | A namespace that groups tables and other objects inside a database | [01](chapters/01_ddl_schema/README.md) |
+| **Selectivity** | Fraction of rows that a condition keeps; drives the choice of index vs seq scan | [14](chapters/14_indexes_performance/README.md) |
+| **Semi-join** | "rows in A that have at least one match in B" (`EXISTS`, `IN`) | [07](chapters/07_subqueries_set_ops/README.md) |
+| **Snapshot** | The set of committed transactions a statement or transaction can see | [11](chapters/11_transactions_locking/README.md) |
+| **Transaction** | A group of statements that succeed or fail together | [11](chapters/11_transactions_locking/README.md) |
+| **Trigger** | A function automatically executed on data or DDL events | [17](chapters/17_triggers/README.md) |
+| **Tuple** | PostgreSQL's internal word for a row (version) | [11](chapters/11_transactions_locking/README.md) |
+| **View / materialized view** | A stored query / a stored query *result* | [15](chapters/15_views_materialized/README.md) |
+| **WAL** | Write-Ahead Log: every change is logged first, which provides durability and replication | [11](chapters/11_transactions_locking/README.md) |
+| **Window function** | A calculation across related rows without collapsing them (`OVER`) | [09](chapters/09_window_functions/README.md) |
