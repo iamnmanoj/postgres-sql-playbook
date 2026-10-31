@@ -5,15 +5,15 @@ import path from 'node:path';
 import { isBlank } from './sqlsplit.js';
 
 const CATEGORIES = {
-  '00': 'Setup', '01': 'Foundations', '02': 'Foundations',
-  '03': 'Querying basics', '04': 'Querying basics',
-  '05': 'Analysis', '06': 'Analysis', '07': 'Analysis',
-  '08': 'Advanced querying', '09': 'Advanced querying',
-  '10': 'Changing data', '11': 'Changing data',
-  '12': 'Rich data types', '13': 'Rich data types',
-  '14': 'Performance',
-  '15': 'Database programming', '16': 'Database programming', '17': 'Database programming',
-  '18': 'Scale & operations', '19': 'Scale & operations', '20': 'Scale & operations',
+  '00': 'Setup & Environment', '01': 'Foundations', '02': 'Foundations',
+  '03': 'Querying & Filtering', '04': 'Functions & Type Conversion',
+  '05': 'Analysis & Aggregation', '06': 'Joins & Relationships', '07': 'Set Operations',
+  '08': 'Recursive Queries', '09': 'Window Functions',
+  '10': 'Changing Data', '11': 'Transactions & Locking',
+  '12': 'JSONB & Semi-Structured Data', '13': 'Full-Text Search',
+  '14': 'Performance & Indexes', '15': 'Functions & Procedures',
+  '16': 'Functions & Procedures', '17': 'Triggers & Automation',
+  '18': 'Partitioning & Scale', '19': 'Security & RLS', '20': 'Advanced Topics',
 };
 
 const DASHES = /^-- -{10,}\s*$/;

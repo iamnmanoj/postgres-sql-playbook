@@ -1,13 +1,12 @@
-# Chapter 03 · SELECT & filtering
+# Chapter 03 · SELECT & Filtering: Rows, Conditions & Patterns
 
 [← Previous](../02_seed_data/README.md) · [Index](../../README.md) · [Next →](../04_builtin_functions/README.md)
 
 ## What you'll learn
-- How to read a `SELECT`: which columns, from where, which rows, in what order, how many
-- Filtering with comparisons, `AND`/`OR`/`NOT`, `IN`, `BETWEEN`, `LIKE`/`ILIKE`, `SIMILAR TO` and regular expressions
-- How NULL behaves: three-valued logic, `IS NULL`, `IS DISTINCT FROM`, `COALESCE`, `NULLIF`
-- Conditional values with `CASE`, `GREATEST` and `LEAST`
-- Sorting, paging (`LIMIT`/`OFFSET`, `FETCH … WITH TIES`, keyset pagination) and de-duplicating (`DISTINCT`, `DISTINCT ON`)
+- Filter data with precision: comparisons, `AND`/`OR`/`NOT`, `IN`, `BETWEEN`, `LIKE`/`ILIKE`, `SIMILAR TO` and POSIX regex
+- Handle `NULL` correctly: three-valued logic, `IS NULL`, `IS DISTINCT FROM`, `COALESCE`, `NULLIF`
+- Conditional logic with `CASE`, `GREATEST` and `LEAST`
+- Sort, page (`LIMIT`/`OFFSET`, `FETCH … WITH TIES`) and de-duplicate (`DISTINCT`, `DISTINCT ON`) results effectively
 
 ## Concepts
 

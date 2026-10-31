@@ -1,4 +1,4 @@
-# Chapter 04 · Built-in functions & casting
+# Chapter 04 · Built-in Functions: String Math & Type Conversion
 
 [← Previous](../03_select_filtering/README.md) · [Index](../../README.md) · [Next →](../05_aggregation/README.md)
 

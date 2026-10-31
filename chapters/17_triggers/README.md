@@ -1,4 +1,4 @@
-# Chapter 17 · Triggers
+# Chapter 17 · Triggers: Automatic Actions on Data Changes
 
 [← Previous](../16_functions_procedures/README.md) · [Index](../../README.md) · [Next →](../18_partitioning/README.md)
 

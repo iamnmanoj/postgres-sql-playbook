@@ -1,4 +1,4 @@
-# Chapter 02 · Getting data in: INSERT, generate_series, COPY
+# Chapter 02 · Getting Data In: INSERT, generate_series & COPY
 
 [← Previous](../01_ddl_schema/README.md) · [Index](../../README.md) · [Next →](../03_select_filtering/README.md)
 

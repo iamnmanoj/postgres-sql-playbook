@@ -1,4 +1,4 @@
-# Chapter 18 · Table partitioning
+# Chapter 18 · Partitioning: Large Tables & Time-Series
 
 [← Previous](../17_triggers/README.md) · [Index](../../README.md) · [Next →](../19_security_rls/README.md)
 

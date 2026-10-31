@@ -1,4 +1,4 @@
-# Chapter 10 · Changing data: UPDATE, DELETE, UPSERT, MERGE, TRUNCATE
+# Chapter 10 · Changing Data: UPDATE, DELETE, UPSERT & MERGE
 
 [← Previous](../09_window_functions/README.md) · [Index](../../README.md) · [Next →](../11_transactions_locking/README.md)
 

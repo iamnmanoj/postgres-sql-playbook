@@ -1,11 +1,11 @@
-# Chapter 16 · Functions, procedures & PL/pgSQL
+# Chapter 16 · Functions & Procedures: Modular SQL & PL/pgSQL
 
 [← Previous](../15_views_materialized/README.md) · [Index](../../README.md) · [Next →](../17_triggers/README.md)
 
 ## What you'll learn
 - SQL functions: scalar, multi-column (OUT), set-returning (TABLE / SETOF), and `BEGIN ATOMIC` bodies
 - Volatility (`IMMUTABLE`/`STABLE`/`VOLATILE`), `STRICT`, `PARALLEL SAFE`, defaults and named arguments
-- PL/pgSQL: variables, `%TYPE`/`%ROWTYPE`, `IF`, loops, `RETURN NEXT/QUERY`, errors, dynamic SQL, cursors
+- PL/pgSQL: variables, `%TYPE`/`%ROWTYPE`, `IF`, loops, `RETURN NEXT/QUERY`, errors, dynamic SQL and cursors
 - `VARIADIC`, polymorphic types and overloading
 - Procedures (`CALL`) with transaction control, `DO` blocks, and `SECURITY DEFINER` done safely
 

@@ -1,11 +1,11 @@
-# Chapter 14 · Indexes & performance
+# Chapter 14 · Indexes & Performance: Optimising Queries
 
 [← Previous](../13_full_text_search/README.md) · [Index](../../README.md) · [Next →](../15_views_materialized/README.md)
 
 ## What you'll learn
-- Reading query plans with `EXPLAIN` and `EXPLAIN ANALYZE`
-- B-tree indexes: single-column, multi-column (and why column order matters), covering (`INCLUDE`), partial, expression, unique
-- GIN, GiST, BRIN and hash indexes, and when to use each
+- Reading query plans with `EXPLAIN` and `EXPLAIN ANALYZE` to understand how PostgreSQL executes your queries
+- B-tree indexes: single-column, multi-column (column order matters), covering (`INCLUDE`), partial, expression, unique
+- GIN, GiST, BRIN and hash indexes, and when each is the right choice
 - Index maintenance: `CONCURRENTLY`, `REINDEX`, unindexed foreign keys, unused indexes
 - Statistics, `ANALYZE`, extended statistics, `VACUUM` and table bloat
 - Tuning patterns: sargable predicates, keyset pagination, `work_mem`, `pg_stat_statements`, parallel query

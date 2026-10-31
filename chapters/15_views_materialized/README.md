@@ -1,4 +1,4 @@
-# Chapter 15 · Views & materialized views
+# Chapter 15 · Views & Materialized Views: Virtual & Stored Results
 
 [← Previous](../14_indexes_performance/README.md) · [Index](../../README.md) · [Next →](../16_functions_procedures/README.md)
 

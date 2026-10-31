@@ -1,4 +1,4 @@
-# Chapter 13 · Full-text search & fuzzy matching
+# Chapter 13 · Full-Text Search: Search & Filter Text
 
 [← Previous](../12_jsonb_arrays/README.md) · [Index](../../README.md) · [Next →](../14_indexes_performance/README.md)
 

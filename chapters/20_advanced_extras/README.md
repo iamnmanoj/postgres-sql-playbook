@@ -1,4 +1,4 @@
-# Chapter 20 · Advanced extras
+# Chapter 20 · Advanced Topics: Extensions & Beyond
 
 [← Previous](../19_security_rls/README.md) · [Index](../../README.md) · [Next → Tips](../../TIPS.md)
 

@@ -1,12 +1,12 @@
-# Chapter 01 · DDL: designing the ShopSphere schema
+# Chapter 01 · Designing ShopSphere: DDL & Schema Fundamentals
 
 [← Previous](../00_setup/README.md) · [Index](../../README.md) · [Next →](../02_seed_data/README.md)
 
 ## What you'll learn
-- How the ShopSphere marketplace is modelled: 6 schemas and 33 tables
-- **DDL** (Data Definition Language): `CREATE`, `ALTER`, `DROP`, `COMMENT`
-- Data types, and which one to pick
-- Constraints that protect data: `NOT NULL`, `DEFAULT`, `CHECK`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `EXCLUDE`
+- Model a multi-tenant e-commerce database: 6 schemas and 33 tables inspired by ShopSphere
+- **DDL** (Data Definition Language): `CREATE`, `ALTER`, `DROP`, `COMMENT` and how to use them safely
+- Choose the right data types for integrity and performance
+- Constraints that protect your data: `NOT NULL`, `DEFAULT`, `CHECK`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `EXCLUDE`
 - Identity columns, sequences, enums, domains, composite types and generated columns
 
 Files: [schema.sql](schema.sql) is the real app schema. [queries.sql](queries.sql) holds the DDL lessons, run in a sandbox schema.

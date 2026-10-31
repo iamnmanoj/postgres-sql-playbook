@@ -1,14 +1,14 @@
-# Chapter 05 · Aggregation & grouping
+# Chapter 05 · Aggregation & Grouping: Summarising Your Data
 
 [← Previous](../04_builtin_functions/README.md) · [Index](../../README.md) · [Next →](../06_joins/README.md)
 
 ## What you'll learn
-- Summarising many rows into one with aggregate functions
+- Summarising many rows into one with aggregate functions: `count`, `sum`, `avg`, `min`, `max`
 - `GROUP BY` and `HAVING`, and how they differ from `WHERE`
-- Conditional aggregation with `FILTER` and `CASE` (pivots)
-- Aggregates that build strings, arrays and JSON
-- Statistics: standard deviation, correlation, regression, median, percentiles, mode
-- Multi-level reports with `GROUPING SETS`, `ROLLUP`, `CUBE` and `GROUPING()`
+- Conditional aggregation with `FILTER` and `CASE` (pivots, conditional sums)
+- Building strings, arrays and JSON with aggregates: `string_agg`, `array_agg`, `json_agg`, `jsonb_object_agg`
+- Statistics: standard deviation, correlation, regression, median, percentiles and mode
+- Multi-level reports with `GROUPING SETS`, `ROLLUP`, `CUBE` and `GROUPING()` for grand totals
 
 ## Concepts
 

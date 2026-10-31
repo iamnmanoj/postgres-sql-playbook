@@ -1,4 +1,4 @@
-# Chapter 00 · Setup: run PostgreSQL and meet `psql`
+# Chapter 00 · Setup: Run PostgreSQL & Meet psql
 
 [Index](../../README.md) · [Next →](../01_ddl_schema/README.md)
 

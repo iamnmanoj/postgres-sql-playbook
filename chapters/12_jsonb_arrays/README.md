@@ -1,4 +1,4 @@
-# Chapter 12 · JSONB & arrays
+# Chapter 12 · JSONB Arrays: Working with Semi-Structured Data
 
 [← Previous](../11_transactions_locking/README.md) · [Index](../../README.md) · [Next →](../13_full_text_search/README.md)
 

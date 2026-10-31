@@ -1,4 +1,4 @@
-# Chapter 09 · Window functions
+# Chapter 09 · Window Functions: Calculations Over Related Rows
 
 [← Previous](../08_ctes_recursive/README.md) · [Index](../../README.md) · [Next →](../10_dml_upsert_merge/README.md)
 

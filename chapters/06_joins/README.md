@@ -1,4 +1,4 @@
-# Chapter 06 · Joins
+# Chapter 06 · Joins: Connecting Tables & Navigating Data
 
 [← Previous](../05_aggregation/README.md) · [Index](../../README.md) · [Next →](../07_subqueries_set_ops/README.md)
 

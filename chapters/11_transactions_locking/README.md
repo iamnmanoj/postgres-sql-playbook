@@ -1,4 +1,4 @@
-# Chapter 11 · Transactions, isolation & locking
+# Chapter 11 · Transactions & Locking: Concurrency & Consistency
 
 [← Previous](../10_dml_upsert_merge/README.md) · [Index](../../README.md) · [Next →](../12_jsonb_arrays/README.md)
 
