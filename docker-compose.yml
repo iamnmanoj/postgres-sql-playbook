@@ -4,7 +4,7 @@ services:
     container_name: shopsphere-pg
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       POSTGRES_DB: shopsphere
       TZ: UTC
     ports:
@@ -25,6 +25,28 @@ services:
       interval: 2s
       timeout: 3s
       retries: 30
+
+  web:
+    build:
+      context: ./webapp
+      network: host                      # lets npm use a proxy running on the host (corporate networks)
+      args:
+        HTTP_PROXY: ${HTTP_PROXY:-}
+        HTTPS_PROXY: ${HTTPS_PROXY:-}
+        NO_PROXY: ${NO_PROXY:-}
+    image: shopsphere-playbook-web
+    container_name: shopsphere-web
+    environment:
+      PGHOST: db
+      PGDATABASE: shopsphere
+      PGPASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "127.0.0.1:${WEB_PORT:-3000}:3000"     # local only: the app can run any SQL as superuser
+    volumes:
+      - ./:/playbook:ro                          # chapters are read live from the repo
+    depends_on:
+      db:
+        condition: service_healthy
 
 volumes:
   pgdata:

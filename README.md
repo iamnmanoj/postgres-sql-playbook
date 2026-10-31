@@ -18,6 +18,14 @@ scripts/psql.sh -e -f /playbook/chapters/03_select_filtering/queries.sql   # run
 Connect from any GUI (VS Code PostgreSQL extension, DBeaver, pgAdmin…) at `localhost:5432`, user `postgres`, password `postgres`, database `shopsphere`.
 See [chapter 00](chapters/00_setup/README.md) for details and a psql cheat sheet.
 
+### 🖥️ Interactive web app (recommended way to practise)
+```bash
+scripts/web.sh                       # starts db + web app in Docker → http://localhost:3000
+```
+Read every lesson, run and edit every query as notebook cells, and solve the exercises with **automatic answer checking**.
+It also has a scratchpad with autocomplete, a schema explorer, search and progress tracking.
+By default your edits run in *safe mode*: they're rolled back, so the data set never changes. Details: [webapp/README.md](webapp/README.md).
+
 ## Learning path
 
 | # | Chapter | Category | You'll learn | Queries | Exercises |
@@ -76,6 +84,9 @@ scripts/
   run_all.sh                rebuild, then run every chapter's queries.sql + solutions.sql (CI-style check)
   check.sh                  run given chapter files twice (idempotency check)
   build_index.py            regenerate KEYWORD_INDEX.md and GLOSSARY.md, validate query ids
+  web.sh                    start the interactive web app (Docker) on http://localhost:3000
+  ci.sh                     full verification pipeline (also used by .github/workflows/ci.yml)
+webapp/                     the interactive practice web app (Node + Express, no build step)
 chapters/NN_topic/
   README.md                 lesson: concepts, keyword table, gotchas
   queries.sql               runnable lesson queries, each with an ID, Keywords and Business question header
@@ -97,10 +108,15 @@ chapters/NN_topic/
 ## Verify everything
 ```bash
 scripts/run_all.sh                   # ~1 minute: rebuild + run all 20 chapters and solutions
+(cd webapp && node test/e2e.mjs)     # same through the web app API, plus grading of every exercise
 python3 scripts/build_index.py       # regenerate the index and glossary after editing queries
 ```
 
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the query-header format, the idempotency rules and how to run `scripts/ci.sh`
+(the same checks GitHub Actions runs on every push).
+
 ## Cleaning up
 ```bash
-docker compose down -v               # remove the container and its data volume
+docker compose down -v               # remove the containers and the data volume
 ```

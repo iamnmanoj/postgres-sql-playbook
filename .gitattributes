@@ -1,0 +1,20 @@
+# Normalise line endings in the repo; check out LF everywhere (scripts must run in Linux containers)
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.md   text eol=lf
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.csv  text eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
+
+# keep generated docs and lock files out of diff noise / language stats
+package-lock.json  linguist-generated=true -diff
+KEYWORD_INDEX.md   linguist-generated=true
+GLOSSARY.md        linguist-generated=true

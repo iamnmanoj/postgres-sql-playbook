@@ -40,7 +40,13 @@ docker compose stop               # stop (data is kept in the pgdata volume)
 docker compose down -v            # remove container AND data volume (full wipe)
 ```
 
-## 3. Connect
+## 3. The interactive web app (easiest)
+```bash
+scripts/web.sh                    # → http://localhost:3000
+```
+It shows every chapter in your browser, lets you run and edit all the queries, and checks your exercise answers automatically. See [webapp/README.md](../../webapp/README.md).
+
+## 4. Connect with psql or a GUI
 ```bash
 scripts/psql.sh                                     # interactive psql on shopsphere
 scripts/psql.sh -c "SELECT count(*) FROM sales.orders"
@@ -55,7 +61,7 @@ If `psql` is installed locally, you can also run `psql -h localhost -U postgres 
 
 > Tip: In VS Code you can open any `queries.sql`, select one query and run just that query. That's the best way to work through the chapters.
 
-## 4. psql survival kit
+## 5. psql survival kit
 
 | Command | What it does |
 |---|---|
@@ -90,7 +96,7 @@ Put your favourite settings in `~/.psqlrc` (inside the container: `/root/.psqlrc
 \x auto
 ```
 
-## 5. First look at the data
+## 6. First look at the data
 ```sql
 SHOW search_path;                        -- core, catalog, logistics, sales, audit, analytics, public
 SELECT version();
@@ -102,7 +108,7 @@ SELECT * FROM catalog.products LIMIT 3;
 Because the database's `search_path` includes every app schema, `SELECT * FROM products` also works. The playbook still writes
 `catalog.products` everywhere so you always know which schema a table lives in.
 
-## 6. How each chapter is organised
+## 7. How each chapter is organised
 
 | File | Purpose |
 |---|---|
